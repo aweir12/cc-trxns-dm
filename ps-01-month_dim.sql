@@ -1,3 +1,5 @@
+conn c##_nbl_cc_txns_dm/"Welcome2018!";
+
 CREATE TABLE MONTH_DIM
     AS
         ( SELECT

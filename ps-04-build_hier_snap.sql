@@ -1,3 +1,5 @@
+conn c##_nbl_cc_txns_dm/"Welcome2018!";
+
 CREATE OR REPLACE PROCEDURE BUILD_RT_HIER_SNAP IS
 BEGIN FOR DT IN (
     SELECT
