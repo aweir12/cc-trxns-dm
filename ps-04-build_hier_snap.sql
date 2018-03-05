@@ -10,8 +10,10 @@ BEGIN FOR DT IN (
 )
 LOOP
     INSERT INTO RT_HIER_SNAP (
+        ROW_WID,
         MONTH_WID,
         EMPLOYEE_NUMBER,
+        EMPLOYEE_ID,
         FIRST_NAME,
         LAST_NAME,
         EMAIL_ADDRESS,
@@ -21,8 +23,10 @@ LOOP
         EXEC_MANAGER
     )
         SELECT
+            TO_CHAR(EMPLOYEE_ID) || '~' || DT.MONTH_WID,
             DT.MONTH_WID,
             EMPLOYEE_NUMBER,
+            EMPLOYEE_ID,
             FIRST_NAME,
             LAST_NAME,
             EMAIL_ADDRESS,
